@@ -1,0 +1,39 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio cache files
+.vs/
+.vscode/
+
+# NuGet
+*.nupkg
+*.snupkg
+nupkgs/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Tools
+.dotnet/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local config con credenciales (no commitear)
+NuGet.local.config
+
+# Refs binarias copiadas para tests
+tests/Divinf.Common.Sql.Tests/refs/*.dll
+tests/Divinf.Common.Sql.Tests/refs/*.pdb

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <RootNamespace>Divinf.Common.SmokeTest</RootNamespace>
+    <AssemblyName>Divinf.Common.SmokeTest</AssemblyName>
+  </PropertyGroup>
+
+  <!--
+    En la POC inicial referenciamos por ProjectReference para iteracion rapida.
+    Una vez publicado el paquete al feed, cambiar por:
+      <PackageReference Include="Divinf.Common.Sql" Version="0.1.0-poc.1" />
+    Esa version del smoketest valida que el consumo desde NuGet funciona.
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Divinf.Common.Sql\Divinf.Common.Sql.csproj" />
+  </ItemGroup>
+
+</Project>

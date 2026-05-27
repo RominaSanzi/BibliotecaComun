@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Template para credenciales locales del feed GitHub Packages.
+
+  USO:
+    1. Copiar este archivo como "NuGet.local.config" (ya esta en .gitignore).
+    2. Reemplazar REEMPLAZAR_CON_PAT por un Personal Access Token de GitHub
+       con scopes: read:packages (y write:packages si vas a publicar local).
+       Generar en: https://github.com/settings/tokens (classic).
+    3. dotnet usara automaticamente este archivo + NuGet.config al hacer restore.
+
+  NUNCA commitear NuGet.local.config con credenciales reales.
+-->
+<configuration>
+  <packageSourceCredentials>
+    <github>
+      <add key="Username" value="RominaSanzi" />
+      <add key="ClearTextPassword" value="REEMPLAZAR_CON_PAT" />
+    </github>
+  </packageSourceCredentials>
+</configuration>

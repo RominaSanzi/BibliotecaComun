@@ -1,0 +1,17 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- Version del paquete y assemblies. Bumpear para cada release POC. -->
+    <Version>0.1.0-poc.1</Version>
+    <FileVersion>0.1.0.1</FileVersion>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+
+    <Copyright>Copyright (c) Divinf 2026</Copyright>
+    <NeutralLanguage>es</NeutralLanguage>
+
+    <Product>BibliotecaComun</Product>
+    <Company>Divinf</Company>
+    <Authors>Divinf</Authors>
+  </PropertyGroup>
+
+</Project>
