@@ -38,9 +38,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          dotnet nuget add source "https://nuget.pkg.github.com/RominaSanzi/index.json" `
-            --name "github" `
+          dotnet nuget update source "github" `
+            --source "https://nuget.pkg.github.com/RominaSanzi/index.json" `
             --username "RominaSanzi" `
             --password "$env:GH_TOKEN" `
             --store-password-in-clear-text
-          dotnet nuget push ./nupkgs/*.nupkg --source "github" --api-key "$env:GH_TOKEN" --skip-duplicate
+          Get-ChildItem -Path "./nupkgs/*.nupkg" | ForEach-Object {
+            dotnet nuget push $_.FullName --source "github" --api-key "$env:GH_TOKEN" --skip-duplicate
+          }
