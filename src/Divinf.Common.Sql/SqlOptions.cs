@@ -1,3 +1,5 @@
+using System.Configuration;
+
 namespace Divinf.Common.Sql
 {
     /// <summary>
@@ -7,6 +9,16 @@ namespace Divinf.Common.Sql
     /// </summary>
     public class SqlOptions
     {
+        /// <summary>
+        /// Devuelve una instancia con valores leídos de app.config/web.config
+        /// (claves "baseDeDatos" y "Region").
+        /// </summary>
+        public static SqlOptions Default => new SqlOptions
+        {
+            BaseDeDatos = ConfigurationManager.AppSettings["baseDeDatos"],
+            Region = ConfigurationManager.AppSettings["Region"]
+        };
+
         /// <summary>
         /// Motor de base de datos. Valores conocidos:
         /// "MYSQL", "SQLSERVER", "SQLSERVER14".

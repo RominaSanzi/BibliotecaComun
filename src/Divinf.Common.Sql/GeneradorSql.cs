@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Text.RegularExpressions;
 using Divinf.Common.Sql.Internal;
 
@@ -73,6 +74,12 @@ namespace Divinf.Common.Sql
         #endregion
 
         #region Constructores
+        /// <summary>
+        /// Constructor sin parametros. Lee baseDeDatos y Region desde app.config/web.config
+        /// via ConfigurationManager.AppSettings. Equivalente al comportamiento del VB legacy.
+        /// </summary>
+        public GeneradorSql() : this(SqlOptions.Default) { }
+
         /// <summary>
         /// Constructor principal. Recibe opciones por inyeccion en lugar de leer ConfigurationManager.
         /// </summary>

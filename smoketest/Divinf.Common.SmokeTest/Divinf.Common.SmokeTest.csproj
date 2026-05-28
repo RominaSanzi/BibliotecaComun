@@ -16,7 +16,7 @@
     Esa version del smoketest valida que el consumo desde NuGet funciona.
   -->
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Divinf.Common.Sql\Divinf.Common.Sql.csproj" />
+    <PackageReference Include="Divinf.Common.Sql" Version="0.1.0-poc.1" />
   </ItemGroup>
 
 </Project>
